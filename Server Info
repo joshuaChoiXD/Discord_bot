@@ -1,0 +1,18 @@
+                    var chnl = message.Channel as SocketGuildChannel;
+                    var Guild = chnl.Guild.Name;
+                    var id = chnl.Guild.Id;
+                    var owner = chnl.Guild.Owner.Username;
+                    var user = chnl.Guild.Users;
+                    var user2 = user.Count();
+                    var text = chnl.Guild.TextChannels.Count;
+                    var voice = chnl.Guild.VoiceChannels.Count;
+                    var icon = chnl.Guild.IconUrl;
+                    var description = chnl.Guild.Description;
+                    builder.WithTitle("Server Info:");
+                    builder.AddField("Server Name:", "Server " + Guild, true);
+                    builder.AddField("Server ID:", "ID " + id, true);
+                    builder.AddField("Server Description:", "Description is " + description, true);
+                    builder.AddField("Owner:", "Owner " + owner, true);
+                    builder.AddField("Total Server People and Bots Count:", "Total Number " + user2, true);
+                builder.AddField("Total Text Chanel Count:", "Total Text Channel Number " + text, true);
+                builder.AddField("Total Voice Channel Count:", "Total Voice Channel Number " +voice, true);
