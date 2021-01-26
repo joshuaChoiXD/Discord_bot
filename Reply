@@ -58,11 +58,14 @@ namespace Discord_Bot
         }
         private async Task MessageReceivedAsync(SocketMessage message)
         {
+        var tick = new Emoji("\u2714");
             if(message.Content == ";Hello")
             {
                 await message.Channel.SendMessageAsync("Hi! I am a Discord Bot!");
+                await message.AddReactionAsync(tick);
             }
         }
     }
 }
-//Run this code and expect your bot to go online. Try entering ;Hello. Your discord bot should send Hi! I am a Discord Bot!.
+//Run this code and expect your bot to go online. Try entering ;Hello. Your discord bot should send Hi! I am a Discord Bot!. Also, the bot will also
+//add a tick on your message
