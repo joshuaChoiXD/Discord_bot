@@ -64,3 +64,4 @@ namespace Discord_Bot
             }
         }
         //DM Your own bot and type ;dm. Expect your bot to reply Yes, this is dm.
+        //Please mark that the bot will reply to all commands(Including Server commands) in DM. This code is only specific for DM Channels.
