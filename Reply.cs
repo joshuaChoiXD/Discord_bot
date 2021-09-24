@@ -58,7 +58,7 @@ namespace Discord_Bot
         }
         private async Task MessageReceivedAsync(SocketMessage message)
         {
-                if (message.Author.Id == _client.CurrentUser.Id)
+            if (message.Author.Id == _client.CurrentUser.Id)
                 return;
         var tick = new Emoji("\u2714");
             if(message.Content == ";Hello")
