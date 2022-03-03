@@ -18,12 +18,8 @@ namespace Discord_Bot
     class Program
     {
         private DiscordSocketClient _client;
-        public static void Main(string[] args)
-                  => new Program().MainAsync().GetAwaiter().GetResult();
-        static void MainDiscord(string[] args)
-        {
-            new Program().MainAsync().GetAwaiter().GetResult();
-        }
+        public static void Main(string[] args) => new Program().MainAsync().GetAwaiter().GetResult();
+        static void MainDiscord(string[] args) => new Program().MainAsync().GetAwaiter().GetResult();
         private Task Log(LogMessage m)
         {
             Console.WriteLine(m.ToString());
@@ -58,9 +54,8 @@ namespace Discord_Bot
         }
         private async Task MessageReceivedAsync(SocketMessage message)
         {
-            if (message.Author.Id == _client.CurrentUser.Id)
-                return;
-        var tick = new Emoji("\u2714");
+            if (message.Author.Id == _client.CurrentUser.Id) return;
+            var tick = new Emoji("\u2714");
             if(message.Content == ";Hello")
             {
                 await message.Channel.SendMessageAsync("Hi! I am a Discord Bot!");
